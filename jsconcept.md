@@ -165,3 +165,50 @@ There are some ideas from functional programming that are immensely useful:
   * **Anonymous functions**/lambdas/function literals
 
 
+#### JSON
+Stands for **J**ava**S**cript **O**bject **N**otation
+
+Define a way of **serializing** javascript objects
+ * **to serialize**: to turn an object into a string that can be deserialized
+ * **to deserialize**: to turn a serialized string into an object
+
+ * JSON.stringify(*object*) returns a string representing *object* serialized in JSON format
+ * JSON.parse(*jsonstring*) returns a JS object from the jsonstring serialized in JSON format
+
+
+#### setTimeout
+setTimeout(function, delay);
+
+function will fire after delay milliseconds
+
+#### Tasks, Micro-tasks and the Event Loop
+
+The javascript runtime can do only one thing at a time...
+
+But the JS runtime runs within a browser, which can do multiple things at a time
+
+**Call stack**: javascript runtime call stack.Executes the javascript commands, functions.
+
+**Task Queue**: when the browser internal implementation notices a callback from something
+like setTimeout or addEventListener is should be fired, it creates a Task and enqueue it 
+in the Task Queue.
+
+**Micro-task Queue**: Promises are special tasks that execute with higher priority than 
+normal tasks, so they have their own special queue.
+
+**Event loop**: Processes the task queues
+ * when the call stack is empty, the event loop pulls the next task from the task queues
+ and puts it on the call stack.
+ * The Micro-task queue has higher priority than the Task Queue.
+
+ demo
+ ```javascript
+ console.log("part A");
+
+ setTimeout(function timeout() {
+  console.log("part C");
+ },5000);
+
+ console.log("part A");
+ ```
+
