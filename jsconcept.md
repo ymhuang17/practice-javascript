@@ -7,7 +7,7 @@ class ClassName {
   constructor(params)  { // constructor is optional
   //...
   }
-  methodName() { // you don't use the <strong>function</strong> keyword to define methods
+  methodName() { // you don't use the function keyword to define methods
   //...
   }
   methodone() {
@@ -16,7 +16,7 @@ class ClassName {
   methodtwo() {
     // ...
   }
-  //All method are **public**,and you **cannot** specify private methods...yet.
+  //All method are **public**,and you *cannot specify private methods...yet.
 
 }
 ```
@@ -37,9 +37,9 @@ the object on which the method is called**
 *this* is a **parameter** to passed to every function in JavaScript.
 
 JavaScript assigns *this* to be a different value depending on how it is used.
-  *this* is set to the new object being created
-  When called as a **method**, *this* is the object on which the method was called
-  When called from an **event handler**, *this* is the DOM element on which the event handler was attached
+  * *this* is set to the new object being created
+  * When called as a **method**, *this* is the object on which the method was called
+  * When called from an **event handler**, *this* is the DOM element on which the event handler was attached
 
 
 #### Bind in Classes
