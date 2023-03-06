@@ -31,7 +31,7 @@ y.methodName();
 #### This
 The **this** keyword in JavaScript is **dynamically assigned**.
 
-When we use *this* in a function that is not being invoked by an event handler, ** *this* is set to 
+When we use *this* in a function that is not being invoked by an event handler, ***this* is set to 
 the object on which the method is called**
 
 *this* is a **parameter** to passed to every function in JavaScript.
@@ -212,3 +212,12 @@ normal tasks, so they have their own special queue.
  console.log("part A");
  ```
 
+
+#### Global Variables
+
+There are three ways to define global variables
+```javascript
+var foo = value;
+window.foo = value;
+foo = value;     // implied global
+```
